@@ -10,7 +10,7 @@ namespace DesignPatterns\Creational\SimpleFactory;
 class OperationFactory
 {
 	/**
-	 *
+	 * 创建操作对象
 	 * @param $operate
 	 *
 	 * @return OperationAdd|OperationDiv|OperationMul|OperationSub|null

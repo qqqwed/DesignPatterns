@@ -1,9 +1,4 @@
 <?php
-/**
- * Description:
- * Created by Martini
- * DateTime: 2019-06-28 22:42
- */
 
 namespace DesignPatterns\Creational\SimpleFactory;
 
