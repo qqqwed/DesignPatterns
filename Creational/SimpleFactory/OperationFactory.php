@@ -16,7 +16,7 @@ class OperationFactory
 	 * @return OperationAdd|OperationDiv|OperationMul|OperationSub|null
 	 * @author Martini 2019-06-30 19:58
 	 */
-	public static function createOperate($operate) // Product 抽象产品
+	public static function createOperate($operate)
 	{
         $obj = null;
         switch ($operate){
