@@ -5,7 +5,7 @@
  * DateTime: 2019-07-02 14:07
  */
 
-namespace DesignPatterns\Behavioral\Tests;
+namespace DesignPatterns\Behavioral\Strategy\Tests;
 
 
 use DesignPatterns\Behavioral\Strategy\Alipay;
