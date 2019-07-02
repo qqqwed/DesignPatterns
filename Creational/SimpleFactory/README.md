@@ -11,170 +11,19 @@
 2. 实现各个具体的类。
 
 ### 代码
+* 以 <span style="color:orange">计算器</span> 为例
+>你只需要输入"+-x/"符号，就能进入相应的计算模式，然后你输入数据就能得到结果，你并不需要关心它是怎么做到的。
+
+* 以 <span style="color:orange">支付方式</span> 为例
+>你只要在用户端选择支付方式,就能使用相应支付平台的支付
+
+具体的测试可通过/Tests下的测试用例查看
+
 这里以 <span style="color:orange">计算器</span> 为例，你只需要输入"+-x/"符号，就能进入相应的计算模式，然后你输入数据就能得到结果，你并不需要关心它是怎么做到的。
+
 
 你可以在  [GitHub](https://github.com/qqqwed/DesignPatterns/tree/master/Creational/SimpleFactory) 查看这段代码。
 
-
-OperationFactory.php
-```php
-<?php
-/**
- * Description: 简单工厂类
- * Created by Martini
- * DateTime: 2019-06-28 22:42
- */
-
-namespace DesignPatterns\Creational\SimpleFactory;
-
-class OperationFactory
-{
-	/**
-	 * 操作工厂类
-	 * @param $operate
-	 *
-	 * @return OperationAdd|OperationDiv|OperationMul|OperationSub|null
-	 * @author Martini 2019-06-30 19:58
-	 */
-	public static function createOperate($operate)
-	{
-        $obj = null;
-        switch ($operate){
-            case "+":
-				$obj = new OperationAdd();
-                break;
-            case "-":
-				$obj = new OperationSub();
-                break;
-            case "*":
-				$obj = new OperationMul();
-                break;
-            case "/":
-				$obj = new OperationDiv();
-                break;
-		}
-		return $obj;
-	}
-}
-```
-OperationAdd.php
-```php
-<?php
-
-namespace DesignPatterns\Creational\SimpleFactory;
-
-
-class OperationAdd
-{
-	public function getResult($number1, $number2)
-	{
-		return intval($number1 + $number2);
-	}
-}
-```
-OperationSub.php
-```php
-<?php
-
-namespace DesignPatterns\Creational\SimpleFactory;
-
-
-class OperationSub
-{
-	public function getResult($number1, $number2)
-	{
-		return intval($number1 - $number2);
-	}
-}
-```
-OperationMul.php
-```php
-<?php
-
-namespace DesignPatterns\Creational\SimpleFactory;
-
-
-class OperationMul
-{
-	public function getResult($number1, $number2)
-	{
-		return intval($number1 * $number2);
-	}
-}
-```
-
-OperationDiv.php
-```php
-<?php
-
-namespace DesignPatterns\Creational\SimpleFactory;
-
-
-class OperationDiv
-{
-	public function getResult($number1, $number2)
-	{
-		return intval($number1 / $number2);
-	}
-}
-```
-
-### 用法
-```php
-$operate = OperationFactory::createOperate('+');
-$operate->getResult(1,2);
-```
-### 测试
-```php
-<?php
-/**
- * Description:简单工厂测试类
- * Created by Martini
- * DateTime: 2019-06-29 10:49
- */
-
-namespace DesignPatterns\Creational\SimpleFactory\Tests;
-
-
-use DesignPatterns\Creational\SimpleFactory\OperationAdd;
-use DesignPatterns\Creational\SimpleFactory\OperationDiv;
-use DesignPatterns\Creational\SimpleFactory\OperationFactory;
-use DesignPatterns\Creational\SimpleFactory\OperationMul;
-use DesignPatterns\Creational\SimpleFactory\OperationSub;
-use PHPUnit\Framework\TestCase;
-
-class SimpleFactoryTest extends TestCase
-{
-	/**
-	 * 计算器类测试方法
-	 * @dataProvider OperateProvider
-	 * @param string $oper 操作方式
-	 * @param float $a 数据1
-	 * @param float $b 数据2
-	 * @param int $expected 期待的计算结果
-	 * @param object $obj 创建的对象
-	 *
-	 * @author Martini 2019-06-30 22:21
-	 */
-	public function testOperation($oper, $a, $b, $expected, $obj)
-	{
-		$operate = OperationFactory::createOperate($oper);
-
-		$this->assertInstanceOf($obj, $operate);
-		$this->assertEquals($expected, $operate->getResult($a, $b));
-	}
-
-	public function OperateProvider()
-	{
-		return [
-			['+', 12, 3, 15, OperationAdd::class],
-			['-', 12, 3, 9, OperationSub::class],
-			['*', 12, 3, 36, OperationMul::class],
-			['/', 12, 3, 4, OperationDiv::class],
-		];
-	}
-
-}
 
 ```
 ### 缺点
