@@ -37,7 +37,8 @@
 
 # 一、创建型
 
-## [简单工厂模式（Simple Factory）](https://github.com/qqqwed/DesignPatterns/tree/master/Creational/SimpleFactory)【已完成】
+## [简单工厂模式（Simple Factory）](https://github.com/qqqwed/DesignPatterns/tree/master/Creational/SimpleFactory)
+>可以根据参数的不同返回不同类的实例。
 ## 抽象工厂模式（Abstract Factory）
 ## 工厂方法模式（Factory Method）
 ## 单例模式（Singleton）
@@ -73,6 +74,7 @@
 ## 观察者模式（Observer）
 ## 状态模式（State）
 ## [策略模式（Strategy）](https://github.com/qqqwed/DesignPatterns/tree/master/Behavioral/Strategy)
+>对象有某个行为，但是在不同的场景下，该行为有不同的实现算法。
 ## 模板方法模式（Template Method）
 ## 访问者模式（Visitor）
 ## 
