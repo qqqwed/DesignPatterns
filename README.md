@@ -72,9 +72,10 @@
 ## 中介者模式（Mediator）
 ## 备忘录模式（Memento）
 ## [观察者模式（Observer）](https://github.com/qqqwed/DesignPatterns/tree/master/Behavioral/Observer)
+> 定义对象间一对多的依赖关系，当对象的状态发生变化时，所有依赖于它的对象都得到通知并被自动更新。
 ## 状态模式（State）
 ## [策略模式（Strategy）](https://github.com/qqqwed/DesignPatterns/tree/master/Behavioral/Strategy)
->对象有某个行为，但是在不同的场景下，该行为有不同的实现算法。
+> 对象有某个行为，但是在不同的场景下，该行为有不同的实现算法。
 ## 模板方法模式（Template Method）
 ## 访问者模式（Visitor）
 ## 
