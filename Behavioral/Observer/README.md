@@ -85,6 +85,8 @@
 ### 方式一：SPL 快速实现
 使用 SPL 提供的 SplSubject和 SplObserver接口以及 SplObjectStorage类，快速实现 Observer 设计模式。
 
+关于 SPL 实现的详细描述 可参看 [利用SPL快速实现Observer设计模式](https://www.cnblogs.com/martini-d/p/li-yong-spl-kuai-su-shi-xian-observer-she-ji-mo-sh.html)
+
 User.php    
 
 ```php
