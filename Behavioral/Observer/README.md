@@ -73,7 +73,8 @@
 
 ### 模拟案例的 UML 类图
 
-![SPL_observer](/Users/martini/Documents/书房/SPL_observer.jpg)
+![SPL_observer](https://img2018.cnblogs.com/blog/1275424/201907/1275424-20190705011541364-1525497213.jpg)
+
 
 尽管实际网站中的用户要有更多的属性，特别是通常需要用 ID 来标识每个用户，但是我们为了突出本文的主题，只保留了案例所需的属性。
 
