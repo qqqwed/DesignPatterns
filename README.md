@@ -44,7 +44,6 @@
 ## 单例模式（Singleton）
 ## 建造者模式（Builder）
 ## 原型模式（Prototype）
-## 
 ## 多例模式（Multiton）
 ## 对象池模式（Pool）
 
